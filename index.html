@@ -3,436 +3,754 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hogzmann Technologies</title>
+    <title>Hogzmann Technologies | Smart WiFi LED Clock</title>
 
-<style>
+    <meta name="description"
+        content="Premium Smart WiFi RGB LED Clock designed by Hogzmann Technologies. Elegant. Intelligent. Built for modern homes.">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial;
-}
+    <meta name="keywords"
+        content="LED Clock, WiFi Clock, RGB Clock, ESP32 Clock, Hogzmann, Smart Clock">
 
-body{
+    <meta name="author"
+        content="Hogzmann Technologies">
 
-background:#f7f7f7;
-color:#333;
+    <link rel="icon" href="favicon.ico">
 
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-header{
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-padding:15px 8%;
+    <link rel="stylesheet"
+        href="css/style.css">
 
-display:flex;
+    <link rel="stylesheet"
+        href="css/responsive.css">
 
-justify-content:space-between;
-
-align-items:center;
-
-position:sticky;
-
-top:0;
-
-z-index:999;
-
-}
-
-header img{
-
-height:55px;
-
-}
-
-nav a{
-
-text-decoration:none;
-
-margin-left:35px;
-
-color:#333;
-
-font-weight:600;
-
-}
-
-.hero{
-
-padding:70px 10%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-flex-wrap:wrap;
-
-}
-
-.hero-left{
-
-width:45%;
-
-}
-
-.hero-left h1{
-
-font-size:50px;
-
-margin-bottom:20px;
-
-}
-
-.hero-left h1 span{
-
-color:#5c9c27;
-
-}
-
-.hero-left p{
-
-font-size:19px;
-
-line-height:32px;
-
-margin-bottom:30px;
-
-}
-
-button{
-
-background:#5c9c27;
-
-border:none;
-
-padding:16px 35px;
-
-font-size:18px;
-
-color:white;
-
-border-radius:8px;
-
-cursor:pointer;
-
-}
-
-.hero-right{
-
-width:48%;
-
-text-align:center;
-
-}
-
-.hero-right img{
-
-width:100%;
-
-max-width:650px;
-
-}
-
-.section{
-
-padding:70px 10%;
-
-background:white;
-
-margin-top:20px;
-
-}
-
-.section h2{
-
-text-align:center;
-
-margin-bottom:45px;
-
-font-size:40px;
-
-}
-
-.features{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.feature{
-
-padding:25px;
-
-background:#fafafa;
-
-border-radius:12px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-
-text-align:center;
-
-}
-
-.feature h3{
-
-color:#5c9c27;
-
-margin-bottom:10px;
-
-}
-
-.spec{
-
-display:flex;
-
-justify-content:center;
-
-}
-
-.spec img{
-
-width:100%;
-
-max-width:1100px;
-
-border-radius:15px;
-
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-
-}
-
-.guides{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:30px;
-
-}
-
-.guides img{
-
-width:100%;
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-
-}
-
-footer{
-
-background:#222;
-
-color:white;
-
-padding:40px;
-
-text-align:center;
-
-margin-top:40px;
-
-}
-
-footer p{
-
-margin:10px;
-
-}
-
-@media(max-width:900px){
-
-.hero{
-
-display:block;
-
-text-align:center;
-
-}
-
-.hero-left,
-
-.hero-right{
-
-width:100%;
-
-}
-
-.hero-left{
-
-margin-bottom:50px;
-
-}
-
-.guides{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
+    <link rel="stylesheet"
+        href="css/animation.css">
 
 </head>
 
 <body>
 
-<header>
+<div class="loader">
 
-<img src="Logo.png">
+    <div class="loader-logo">
 
-<nav>
+        <img src="images/logo.png"
+            alt="Hogzmann">
 
-<a href="#">Home</a>
+    </div>
 
-<a href="#product">Product</a>
+</div>
 
-<a href="#spec">Specifications</a>
 
-<a href="#setup">Setup Guide</a>
 
-</nav>
+<header class="header">
+
+    <div class="container">
+
+        <div class="logo">
+
+            <img src="images/logo.png"
+                alt="Hogzmann Logo">
+
+        </div>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#features">Features</a></li>
+
+                <li><a href="#specifications">Specifications</a></li>
+
+                <li><a href="#gallery">Gallery</a></li>
+
+                <li><a href="#setup">Setup Guide</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#contact"
+            class="btn-nav">
+
+            Coming Soon
+
+        </a>
+
+    </div>
 
 </header>
 
-<section class="hero">
 
-<div class="hero-left">
 
-<h1>SMART WiFi <span>LED CLOCK</span></h1>
+<section id="home"
+    class="hero">
 
-<p>
+    <div class="container hero-grid">
 
-Premium Smart LED Clock with automatic WiFi time synchronization,
+        <div class="hero-left">
 
-RGB lighting, browser based configuration and elegant modern design.
+            <span class="badge">
 
-</p>
+                Premium Smart Clock
 
-<button>Coming Soon</button>
+            </span>
 
-</div>
+            <h1>
 
-<div class="hero-right">
+                Smart WiFi
 
-<img src="clock.png">
+                <span>
 
-</div>
+                    RGB LED Clock
+
+                </span>
+
+            </h1>
+
+            <p>
+
+                Beautifully designed digital clock with automatic WiFi time synchronization,
+
+                browser-based configuration,
+
+                RGB lighting,
+
+                touch color control
+
+                and premium wall-mounted design.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact"
+                    class="btn-primary">
+
+                    Coming Soon
+
+                </a>
+
+                <a href="#features"
+                    class="btn-secondary">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+
+                    <h3>WiFi</h3>
+
+                    <span>Automatic Time</span>
+
+                </div>
+
+                <div>
+
+                    <h3>RGB</h3>
+
+                    <span>16 Million Colors</span>
+
+                </div>
+
+                <div>
+
+                    <h3>USB-C</h3>
+
+                    <span>5V Powered</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-right">
+
+            <div class="rgb-glow"></div>
+
+            <img src="images/hero-clock.png"
+                alt="Hogzmann Smart Clock"
+                class="hero-clock">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="features"
+    class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose Hogzmann</span>
+
+            <h2>
+
+                Smart Features Designed
+
+                For Modern Living
+
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    📶
+
+                </div>
+
+                <h3>
+
+                    WiFi Time Sync
+
+                </h3>
+
+                <p>
+
+                    Automatically synchronizes time using Internet NTP servers.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    🌈
+
+                </div>
+
+                <h3>
+
+                    RGB Lighting
+
+                </h3>
+
+                <p>
+
+                    Choose from millions of beautiful colors.
+
+                </p>
+
+            </div>
+			
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    🌐
+
+                </div>
+
+                <h3>
+
+                    Browser Configuration
+
+                </h3>
+
+                <p>
+
+                    Configure directly from any web browser.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    👆
+
+                </div>
+
+                <h3>
+
+                    Touch Color Control
+
+                </h3>
+
+                <p>
+
+                    Instantly change colors with a simple touch.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    ⚡
+
+                </div>
+
+                <h3>
+
+                    Energy Efficient
+
+                </h3>
+
+                <p>
+
+                    Low power consumption using USB-C.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    🏠
+
+                </div>
+
+                <h3>
+
+                    Premium Design
+
+                </h3>
+
+                <p>
+
+                    Minimal modern design suitable for any interior.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="section" id="product">
 
-<h2>Why Choose Hogzmann?</h2>
 
-<div class="features">
+<section id="specifications"
+    class="specifications">
 
-<div class="feature">
+    <div class="container">
 
-<h3>WiFi Sync</h3>
+        <div class="section-title">
 
-<p>Automatic Internet Time Synchronization.</p>
+            <span>Specifications</span>
 
-</div>
+            <h2>
 
-<div class="feature">
+                Built With Quality
 
-<h3>RGB Lighting</h3>
+            </h2>
 
-<p>16 Million customizable colors.</p>
+        </div>
 
-</div>
+        <div class="spec-grid">
 
-<div class="feature">
+            <div class="spec-card">
 
-<h3>Browser Control</h3>
+                <h4>Processor</h4>
 
-<p>No App Installation Required.</p>
+                <p>ESP32</p>
 
-</div>
+            </div>
 
-<div class="feature">
+            <div class="spec-card">
 
-<h3>Touch Control</h3>
+                <h4>Power</h4>
 
-<p>Change colors by touching the display.</p>
+                <p>USB Type-C 5V</p>
 
-</div>
+            </div>
 
-<div class="feature">
+            <div class="spec-card">
 
-<h3>High Visibility</h3>
+                <h4>Connectivity</h4>
 
-<p>Perfect for Home and Office.</p>
+                <p>WiFi</p>
 
-</div>
+            </div>
 
-<div class="feature">
+            <div class="spec-card">
 
-<h3>Premium Design</h3>
+                <h4>Lighting</h4>
 
-<p>Modern Minimal Look.</p>
+                <p>RGB LEDs</p>
 
-</div>
+            </div>
 
-</div>
+            <div class="spec-card">
+
+                <h4>Control</h4>
+
+                <p>Browser + Touch</p>
+
+            </div>
+
+            <div class="spec-card">
+
+                <h4>Mounting</h4>
+
+                <p>Wall Mounted</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Gallery</span>
+
+            <h2>Designed to Stand Out</h2>
+
+            <p>
+                Elegant design with premium finish, built to complement
+                your modern living space.
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="images/hero-clock.png" alt="Clock Front">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/package.png" alt="Packaging">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/setup-front.png" alt="Setup Guide">
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="section" id="spec">
 
-<h2>Product Specifications</h2>
 
-<div class="spec">
+<!-- ===================== SETUP GUIDE ===================== -->
 
-<img src="clock.png">
+<section id="setup" class="setup">
 
-</div>
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Quick Setup</span>
+
+            <h2>Getting Started Is Easy</h2>
+
+        </div>
+
+        <div class="setup-grid">
+
+            <div class="setup-card">
+
+                <img src="images/setup-front.png"
+                    alt="Front Guide">
+
+                <h3>Front Guide</h3>
+
+                <p>
+                    Understand the front panel and display functions.
+                </p>
+
+            </div>
+
+            <div class="setup-card">
+
+                <img src="images/setup-back.png"
+                    alt="Back Guide">
+
+                <h3>Back Guide</h3>
+
+                <p>
+                    Learn wiring, power connection and configuration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="section" id="setup">
 
-<h2>Setup Guide</h2>
 
-<div class="guides">
+<!-- ===================== ABOUT ===================== -->
 
-<img src="SetupGuide Front Side.png">
+<section class="about">
 
-<img src="Setup Guide Backside.png">
+    <div class="container about-grid">
 
-</div>
+        <div>
+
+            <img src="images/logo.png"
+                class="about-logo"
+                alt="Hogzmann">
+
+        </div>
+
+        <div>
+
+            <span>About Hogzmann</span>
+
+            <h2>
+
+                Smart Time.
+
+                Simplified.
+
+            </h2>
+
+            <p>
+
+                Hogzmann Technologies creates elegant smart electronic
+                products that combine modern design, intelligent
+                technology and reliable performance.
+
+            </p>
+
+            <p>
+
+                Our mission is to build products that are beautiful,
+                simple to use and built with quality.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
+
+
+
+<!-- ===================== CONTACT ===================== -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Contact</span>
+
+            <h2>
+
+                We'd Love To Hear From You
+
+            </h2>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-card">
+
+                <h3>Email</h3>
+
+                <p>hogzmann@gmail.com</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>Website</h3>
+
+                <p>www.hogzmann.com</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>Status</h3>
+
+                <p>Product Launching Soon</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================== CALL TO ACTION ===================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+
+            Experience Smart Time
+
+        </h2>
+
+        <p>
+
+            Be the first to know when the Hogzmann Smart WiFi LED Clock
+            becomes available.
+
+        </p>
+
+        <a href="#contact" class="btn-primary">
+
+            Notify Me
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================== FOOTER ===================== -->
 
 <footer>
 
-<h2>HOGZMANN TECHNOLOGIES</h2>
+    <div class="container footer-grid">
 
-<p>Smart Time. Simplified.</p>
+        <div>
 
-<p>📧 hogzmann@gmail.com</p>
+            <img src="images/logo.png"
+                class="footer-logo"
+                alt="Hogzmann">
 
-<p>🌐 www.hogzmann.com</p>
+            <p>
 
-<p>© 2026 Hogzmann Technologies. All Rights Reserved.</p>
+                Smart Time.
+                Simplified.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#features">Features</a></li>
+
+                <li><a href="#gallery">Gallery</a></li>
+
+                <li><a href="#setup">Setup Guide</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Support</h4>
+
+            <ul>
+
+                <li><a href="#">FAQ</a></li>
+
+                <li><a href="#">Warranty</a></li>
+
+                <li><a href="#">Downloads</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>hogzmann@gmail.com</p>
+
+            <p>www.hogzmann.com</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Hogzmann Technologies. All Rights Reserved.
+
+    </div>
 
 </footer>
+
+
+
+<!-- ===================== SCROLL TOP ===================== -->
+
+<button id="scrollTop">
+
+    ↑
+
+</button>
+
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+
+<script src="js/script.js"></script>
 
 </body>
 
